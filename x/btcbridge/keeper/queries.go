@@ -76,7 +76,6 @@ func (k Keeper) QuerySigningRequest(goCtx context.Context, req *types.QuerySigni
 	requests := k.FilterSigningRequestsByStatus(ctx, req)
 
 	return &types.QuerySigningRequestResponse{Requests: requests}, nil
-
 }
 
 func (k Keeper) QuerySigningRequestByAddress(goCtx context.Context, req *types.QuerySigningRequestByAddressRequest) (*types.QuerySigningRequestByAddressResponse, error) {
@@ -89,7 +88,6 @@ func (k Keeper) QuerySigningRequestByAddress(goCtx context.Context, req *types.Q
 	requests := k.FilterSigningRequestsByAddr(ctx, req)
 
 	return &types.QuerySigningRequestByAddressResponse{Requests: requests}, nil
-
 }
 
 func (k Keeper) QueryUTXOs(goCtx context.Context, req *types.QueryUTXOsRequest) (*types.QueryUTXOsResponse, error) {
